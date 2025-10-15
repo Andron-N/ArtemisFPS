@@ -2120,7 +2120,7 @@ Camera:
     y: 0
     width: 1
     height: 1
-  near clip plane: 0.3
+  near clip plane: 0.1
   far clip plane: 1000
   field of view: 60.000004
   orthographic: 0
@@ -3291,7 +3291,7 @@ Transform:
   m_GameObject: {fileID: 459290082}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -9.040242, y: 1.3750002, z: -7.0448914}
+  m_LocalPosition: {x: -9.040242, y: 1.3750002, z: -6.944}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4273,6 +4273,8 @@ GameObject:
   - component: {fileID: 623587743}
   - component: {fileID: 623587742}
   - component: {fileID: 623587741}
+  - component: {fileID: 623587745}
+  - component: {fileID: 623587744}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -4351,6 +4353,45 @@ Transform:
   - {fileID: 1706568843}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &623587744
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 623587740}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f67e03be4213af4894247bcfcbbc8d9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ArtemisFPS.Scripts.Controller
+  _acceleration: 20
+  _gravityMultiplier: 20
+  _walkSpeed: 3.5
+  _sprintSpeed: 8
+  _lookSensitivity: {x: 0.1, y: 0.1}
+  _pitchLimit: 85
+  _currentPitch: 0
+  _cameraNormalFOV: 90
+  _cameraFOVSmoothing: 3
+  MoveInput: {x: 0, y: 0}
+  LookInput: {x: 0, y: 0}
+  IsSprintInput: 0
+  _camera: {fileID: 1706568844}
+  _characterController: {fileID: 623587742}
+--- !u!114 &623587745
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 623587740}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8477f9a63212b164ebc9890e754ba154, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ArtemisFPS.Scripts.Player
+  _controller: {fileID: 623587744}
 --- !u!1 &634120538
 GameObject:
   m_ObjectHideFlags: 1
@@ -15710,7 +15751,7 @@ MonoBehaviour:
   Lens:
     FieldOfView: 60.000004
     OrthographicSize: 5
-    NearClipPlane: 0.3
+    NearClipPlane: 0.1
     FarClipPlane: 1000
     Dutch: 0
     ModeOverride: 0
