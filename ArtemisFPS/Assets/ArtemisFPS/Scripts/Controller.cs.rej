@@ -1,0 +1,8 @@
+diff a/ArtemisFPS/Assets/ArtemisFPS/Scripts/Controller.cs b/ArtemisFPS/Assets/ArtemisFPS/Scripts/Controller.cs	(rejected hunks)
+@@ -0,5 +0,6 @@
+ using UnityEngine;
+ using Unity.Cinemachine;
++
+ 
+ namespace ArtemisFPS.Scripts
+ {

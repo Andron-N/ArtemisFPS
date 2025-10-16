@@ -4366,14 +4366,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ArtemisFPS.Scripts.Controller
   _acceleration: 20
-  _gravityMultiplier: 20
   _walkSpeed: 3.5
   _sprintSpeed: 8
+  _jumpHeight: 2
   _lookSensitivity: {x: 0.1, y: 0.1}
   _pitchLimit: 85
   _currentPitch: 0
   _cameraNormalFOV: 90
   _cameraFOVSmoothing: 3
+  _gravityScale: 5
+  _verticalVelocity: 0
   MoveInput: {x: 0, y: 0}
   LookInput: {x: 0, y: 0}
   IsSprintInput: 0
@@ -7322,7 +7324,7 @@ MeshRenderer:
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
   m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 2
+  m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
@@ -15718,7 +15720,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1706568842}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 1.6, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0

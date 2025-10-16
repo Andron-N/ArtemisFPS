@@ -1,4 +1,3 @@
-using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -40,6 +39,14 @@ namespace ArtemisFPS.Scripts
 
         private void OnSprint(InputValue value) =>
             _controller.IsSprintInput = value.isPressed;
+
+        private void OnJump(InputValue value)
+        {
+            if (value.isPressed)
+            {
+                _controller.TryJump();
+            }
+        }
 
         #endregion
     }
